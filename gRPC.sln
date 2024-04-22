@@ -9,10 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "protos", "protos", "{45EC4F6C-7ED1-4E98-85DC-A87A8A61528E}"
 	ProjectSection(SolutionItems) = preProject
-		hello.proto = hello.proto
+		protos\hello.proto = protos\hello.proto
+		test.proto = test.proto
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "GeneratorInfrastructure\Infrastructure.csproj", "{617CF44F-C3A3-458C-8673-E0F7B1B27BE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "GeneratorInfrastructure\Infrastructure.csproj", "{617CF44F-C3A3-458C-8673-E0F7B1B27BE4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generator", "ControllerGenerator\Generator.csproj", "{76D6D559-024D-4BB3-ACFE-6D3695CCD427}"
 EndProject

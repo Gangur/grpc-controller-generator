@@ -15,7 +15,7 @@ namespace Server.Controllers
             ServerCallContext context)
         {
             var result = await _ihelloservice.HelloAsync(
-                request.FirstName,request.LastName,
+                request.FirstName, request.LastName,
                 context.CancellationToken);
         
             return new HelloResponse()
@@ -28,7 +28,7 @@ namespace Server.Controllers
             ServerCallContext context)
         {
             var result = await _ihelloservice.HelloAsync(
-                request.FirstName,request.LastName,
+                request.FirstName, request.LastName,
                 context.CancellationToken);
         
             return new HelloResponse()

@@ -35,25 +35,25 @@ namespace Generator
 
             var attributeSymbol = context.Compilation.GetTypeByMetadataName(_controllerMapping);
 
-            var controllers = context.Compilation
+            var classes = context.Compilation
                 .SyntaxTrees.ToArray();
 
-            for (int i = 0; i < controllers.Length; i++)
+            for (int i = 0; i < classes.Length; i++)
             {
-                var semanticModel = context.Compilation.GetSemanticModel(controllers[i]);
-                var declaredControllers = controllers[i]
+                var semanticModel = context.Compilation.GetSemanticModel(classes[i]);
+                var declaredClasses = classes[i]
                     .GetRoot()
                     .DescendantNodes()
                     .OfType<ClassDeclarationSyntax>()
                     .ToArray();
 
-                for (int j = 0; j < declaredControllers.Length; j++)
+                for (int j = 0; j < declaredClasses.Length; j++)
                 {
-                    if (declaredControllers[j].AttributeLists
+                    if (declaredClasses[j].AttributeLists
                             .SelectMany(al => al.Attributes)
                                 .Any(a => a.Name.GetText().ToString() == _controllerMappingShort))
                     {
-                        context.AddSource($"{declaredControllers[j].Identifier.ValueText}.g.cs", buildController(declaredControllers[i], semanticModel));
+                        context.AddSource($"{declaredClasses[j].Identifier.ValueText}.g.cs", buildController(declaredClasses[j], semanticModel));
                     }
                 }
             }
