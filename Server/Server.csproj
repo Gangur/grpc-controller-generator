@@ -21,16 +21,16 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<Protobuf Include="../protos/*.proto" OutputDir="../GeneratorInfrastructure/gRPC_Objects" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\ControllerGenerator\Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-	  <ProjectReference Include="..\GeneratorInfrastructure\Infrastructure.csproj" />
+		<Protobuf Include="../protos/*.proto" OutputDir="../Generator/gRPC_Objects" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Folder Include="Properties\" />
+	</ItemGroup>
+
+	<ItemGroup>
+        <ProjectReference Include="..\Generator\Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+	    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
 	</ItemGroup>
 
 </Project>

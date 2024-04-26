@@ -265,7 +265,7 @@ public sealed partial class HelloRequest : pb::IMessage<HelloRequest>
 
 }
 
-public partial class HelloResponse : pb::IMessage<HelloResponse>
+public sealed partial class HelloResponse : pb::IMessage<HelloResponse>
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     , pb::IBufferMessage
 #endif
