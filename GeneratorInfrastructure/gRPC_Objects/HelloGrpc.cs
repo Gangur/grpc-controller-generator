@@ -65,6 +65,14 @@ public static partial class HelloService
       __Marshaller_HelloRequest,
       __Marshaller_HelloResponse);
 
+  [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+  static readonly grpc::Method<global::HelloRequest, global::HelloResponse> __Method_StreamWelcome = new grpc::Method<global::HelloRequest, global::HelloResponse>(
+      grpc::MethodType.ServerStreaming,
+      __ServiceName,
+      "StreamWelcome",
+      __Marshaller_HelloRequest,
+      __Marshaller_HelloResponse);
+
   /// <summary>Service descriptor</summary>
   public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
   {
@@ -83,6 +91,12 @@ public static partial class HelloService
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public virtual global::System.Threading.Tasks.Task<global::HelloResponse> Welcome2(global::HelloRequest request, grpc::ServerCallContext context)
+    {
+      throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual global::System.Threading.Tasks.Task StreamWelcome(global::HelloRequest request, grpc::IServerStreamWriter<global::HelloResponse> responseStream, grpc::ServerCallContext context)
     {
       throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
     }
@@ -156,6 +170,16 @@ public static partial class HelloService
     {
       return CallInvoker.AsyncUnaryCall(__Method_Welcome2, null, options, request);
     }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual grpc::AsyncServerStreamingCall<global::HelloResponse> StreamWelcome(global::HelloRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+    {
+      return StreamWelcome(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+    }
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public virtual grpc::AsyncServerStreamingCall<global::HelloResponse> StreamWelcome(global::HelloRequest request, grpc::CallOptions options)
+    {
+      return CallInvoker.AsyncServerStreamingCall(__Method_StreamWelcome, null, options, request);
+    }
     /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     protected override HelloServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -171,7 +195,8 @@ public static partial class HelloService
   {
     return grpc::ServerServiceDefinition.CreateBuilder()
         .AddMethod(__Method_Welcome, serviceImpl.Welcome)
-        .AddMethod(__Method_Welcome2, serviceImpl.Welcome2).Build();
+        .AddMethod(__Method_Welcome2, serviceImpl.Welcome2)
+        .AddMethod(__Method_StreamWelcome, serviceImpl.StreamWelcome).Build();
   }
 
   /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -183,6 +208,7 @@ public static partial class HelloService
   {
     serviceBinder.AddMethod(__Method_Welcome, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::HelloRequest, global::HelloResponse>(serviceImpl.Welcome));
     serviceBinder.AddMethod(__Method_Welcome2, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::HelloRequest, global::HelloResponse>(serviceImpl.Welcome2));
+    serviceBinder.AddMethod(__Method_StreamWelcome, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::HelloRequest, global::HelloResponse>(serviceImpl.StreamWelcome));
   }
 
 }

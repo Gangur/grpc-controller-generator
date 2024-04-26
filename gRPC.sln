@@ -10,7 +10,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "protos", "protos", "{45EC4F6C-7ED1-4E98-85DC-A87A8A61528E}"
 	ProjectSection(SolutionItems) = preProject
 		protos\hello.proto = protos\hello.proto
-		test.proto = test.proto
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "GeneratorInfrastructure\Infrastructure.csproj", "{617CF44F-C3A3-458C-8673-E0F7B1B27BE4}"

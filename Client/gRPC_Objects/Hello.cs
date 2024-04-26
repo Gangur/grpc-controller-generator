@@ -24,9 +24,10 @@ public static partial class HelloReflection {
         string.Concat(
           "CgtoZWxsby5wcm90byIzCgxIZWxsb1JlcXVlc3QSEQoJZmlyc3ROYW1lGAEg",
           "ASgJEhAKCGxhc3ROYW1lGAIgASgJIiAKDUhlbGxvUmVzcG9uc2USDwoHbWVz",
-          "c2FnZRgBIAEoCTJjCgxIZWxsb1NlcnZpY2USKAoHV2VsY29tZRINLkhlbGxv",
-          "UmVxdWVzdBoOLkhlbGxvUmVzcG9uc2USKQoIV2VsY29tZTISDS5IZWxsb1Jl",
-          "cXVlc3QaDi5IZWxsb1Jlc3BvbnNlYgZwcm90bzM="));
+          "c2FnZRgBIAEoCTKVAQoMSGVsbG9TZXJ2aWNlEigKB1dlbGNvbWUSDS5IZWxs",
+          "b1JlcXVlc3QaDi5IZWxsb1Jlc3BvbnNlEikKCFdlbGNvbWUyEg0uSGVsbG9S",
+          "ZXF1ZXN0Gg4uSGVsbG9SZXNwb25zZRIwCg1TdHJlYW1XZWxjb21lEg0uSGVs",
+          "bG9SZXF1ZXN0Gg4uSGVsbG9SZXNwb25zZTABYgZwcm90bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

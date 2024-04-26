@@ -8,9 +8,10 @@ namespace Infrastructure.Attributes
         public readonly Type InterfaceType;
         public readonly string InterfaceMethod;
 
-        public GrpcInterfaceAttribute(Type interfaceType, string interfaceMethod = "")
+        public GrpcInterfaceAttribute(Type interfaceType, string interfaceMethod = default)
         {
-
+            InterfaceType = interfaceType;
+            InterfaceMethod = interfaceMethod;
         }
     }
 }

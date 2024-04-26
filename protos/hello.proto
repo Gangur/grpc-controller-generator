@@ -12,4 +12,6 @@ message HelloResponse {
 service HelloService {
 	rpc Welcome(HelloRequest) returns (HelloResponse);
 	rpc Welcome2(HelloRequest) returns (HelloResponse);
+
+	rpc StreamWelcome(HelloRequest) returns (stream HelloResponse);
 }
